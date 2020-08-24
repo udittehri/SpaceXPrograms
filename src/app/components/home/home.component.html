@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div class="row ml20">
+        <h1 class="">
+            SpaceX launch Programs
+        </h1>
+    </div>
+
+    <div class="row p-3 mx-4">
+        <div class="col-sm-12 col-md-2 col-lg-2 bgWhite mb-3">
+            <app-filters-heade [(years)]="years" (changeFilters)="changeFilters($event)"> </app-filters-heade>
+        </div>
+        <div class="col-sm-12 col-md-10 col-lg-10 ">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-lg-3 mb-2" *ngFor="let d of filteredData">
+                    <app-program [details]="d"></app-program>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="row p-3 mx-4">
+        Developed By: Udit Tehri
+    </div>
+</div>

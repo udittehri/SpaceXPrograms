@@ -1,0 +1,42 @@
+<!-- <div class="col-md-3 col-sm-12 col-lg-3 " *ngFor="let d of program"> -->
+<div class="bgWhite">
+    <div class="row mb-0 ">
+        <div class="rounded mx-auto d-block mt-3 ">
+            <img [src] = "program.links.mission_patch_small" class="bgGrey" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mx-4">
+            <h4 class="textBlue ml-4"> {{program.rocket.rocket_name}} #{{program.flight_number}} </h4>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12 mx-4">
+            <h4 class=" ml-4"> Mission Ids </h4>
+        </div>
+        <div class="col-md-12 ">
+            <ul>
+                <li class="textBlue ml-4" *ngFor= "let mission of program.mission_id" > {{mission}} </li>
+                
+            </ul>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col mx-4">
+            <h4 class=" ml-4"> Launch Year : <span class="textBlue"> {{program.launch_year}} </span> </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mx-4">
+            <h4 class=" ml-4">Successfull Launch : <span class="textBlue"> {{program.launch_success}} </span> </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col mx-4">
+            <h4 class=" ml-4"> Succesful Landing : <span class="textBlue"> {{program.rocket.first_stage.cores[0].land_success}} </span> </h4>
+        </div>
+    </div>
+</div>
+<!-- </div> -->
