@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start": "node server.js",
+    "heroku-postbuild": "ng build --prod"
+
   },
   "private": true,
   "dependencies": {
@@ -21,6 +23,7 @@
     "@angular/platform-server": "^10.0.11",
     "@angular/router": "~10.0.11",
     "bootstrap": "^3.4.1",
+    "express": "^4.17.1",
     "jquery": "^3.5.1",
     "ngx-bootstrap": "^5.6.1",
     "rxjs": "~6.5.5",
