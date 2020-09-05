@@ -10,7 +10,7 @@ export class FiltersHeadeComponent implements OnInit {
   @Input() years : any
   @Output() changeFilters = new EventEmitter();
 
-  activeYear = 2020
+  activeYear = null
   activeLand = null
   activeLaunch = null
   constructor() { }
@@ -19,6 +19,7 @@ export class FiltersHeadeComponent implements OnInit {
     console.log(this.years);
   }
   changeFilter(value: any, key : string) {
+    debugger
     if (key == 'year') this.activeYear = value
     else if (key == 'isLaunchS') this.activeLaunch = value
     else if (key == 'isLandS') this.activeLand = value
